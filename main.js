@@ -9,11 +9,12 @@
 // ==UserScript==
 // @name         升学e网通播放器之马卡龙
 // @namespace    ren.qianjunakasumi
-// @version      1.0.0
+// @version      1.0.1
 // @author       qianjunakasumi
 // @description  升学e网通视频播放器小组件
 // @source       https://github.com/qianjunakasumi/EWTPlayerMacaron
 // @updateURL    https://github.com/qianjunakasumi/EWTPlayerMacaron/blob/main/main.js
+// @downloadURL  https://github.com/qianjunakasumi/EWTPlayerMacaron/blob/main/main.js
 // @supportURL   https://github.com/qianjunakasumi/EWTPlayerMacaron/issues/new/choose
 // @match        web.ewt360.com/site-study/*
 // @grant        GM_addStyle
