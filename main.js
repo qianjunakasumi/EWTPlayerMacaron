@@ -9,7 +9,7 @@
 // ==UserScript==
 // @name         升学e网通播放器之马卡龙
 // @namespace    ren.qianjunakasumi
-// @version      1.0.1
+// @version      1.0.2
 // @author       qianjunakasumi
 // @description  升学e网通视频播放器小组件
 // @source       https://github.com/qianjunakasumi/EWTPlayerMacaron
@@ -21,12 +21,27 @@
 // @run-at       document-video
 // ==/UserScript==
 
+let fox = false;
+
 function player() {
     return document.getElementsByClassName('ccH5playerBox')[0];
 }
 
 function video() {
+    if (fox) {
+        return document.getElementsByTagName('video')[1];
+    }
     return document.getElementsByTagName('video')[0];
+}
+
+function addCuteFox() {
+    if (fox) {
+        return;
+    }
+    let f = document.createElement('video');
+    f.style.display = 'none';
+    player().insertBefore(f, video());
+    fox = true;
 }
 
 const PLAYBACKRATE = {
@@ -45,7 +60,10 @@ const PLAYBACKRATE = {
         PLAYBACKRATE.data--;
         PLAYBACKRATE.set();
     },
-    set: () => video().playbackRate = PLAYBACKRATE.data / 10,
+    set: () => {
+        addCuteFox();
+        video().playbackRate = PLAYBACKRATE.data / 10
+    },
     get: () => video().playbackRate,
 };
 
