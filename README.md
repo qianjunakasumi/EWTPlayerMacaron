@@ -2,6 +2,10 @@
 
 为升学e网通播放器增添实用小功能
 
+# 无活跃开发者
+
+详见：[#2](https://github.com/qianjunakasumi/EWTPlayerMacaron/issues/2)，因此决定归档此项目。
+
 ## 如何食用
 
 1. 安装支持扩展（插件）功能的主流浏览器，例如 Edge、Chrome 等
